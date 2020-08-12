@@ -8,8 +8,13 @@ use App\Models\Article;
 
 class ElasticSearchController extends Controller
 {
-	public function index(){
-		return view('elasticSearch');
+	public function index(Request $request){
+		$articles = Article::all();
+		$search = $request->input('search');
+		return view('elasticSearch')->with([
+			'articles'=>$articles,
+			'search'=>$search,
+		]);
 	}
 
 	public function search(Request $request){

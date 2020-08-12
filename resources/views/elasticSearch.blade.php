@@ -19,8 +19,7 @@
 
 		</form>
 		<br>	
-		{{-- <p>Danh sách tìm kiếm</p> --}}
-		<p>Danh sách tìm kiếm cho từ khóa '{{$search}}'</p>
+		<p>Danh sách tìm kiếm cho từ khóa " {{$search}} "</p>
 		<table class="table">
 			<thead class="thead-dark">
 				<tr>

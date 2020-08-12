@@ -14,18 +14,19 @@ use App\Models\Article;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-	Article::createIndex($shards = null,$replicas = null);
-	Article::putMapping($ignoreConflicts = true);
-	Article::addAllToIndex();
+// 	Article::createIndex($shards = null,$replicas = null);
+// 	Article::putMapping($ignoreConflicts = true);
+// 	Article::addAllToIndex();
 
-    return view('welcome');
-});
+//     return view('welcome');
+// });
+Article::addAllToIndex();
 Route::get('formsearch','ElasticSearchController@index')->name('elastic.index');
 Route::get('search','ElasticSearchController@search')->name('elastic.search');
 
-// Article::addAllToIndex();
+
 // Route::get('test', function () {
     
 //      $articles = Article::searchByQuery(['match' => ['title' => 'xin']]);
